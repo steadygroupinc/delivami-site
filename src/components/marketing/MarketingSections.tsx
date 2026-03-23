@@ -228,46 +228,62 @@ export function FinalCTA() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-dim py-8 px-6 md:px-[60px] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-      <div className="flex flex-col sm:flex-row items-center gap-6">
-        <Link href="/" className="flex items-center gap-[9px] no-underline">
-          <div className="w-7 h-7 bg-[linear-gradient(135deg,var(--color-gold),var(--color-gold-dim))] rounded-md flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(212,175,55,0.25)]">
-            <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
-              <path
-                d="M2 5.5L9 2L16 5.5V12.5L9 16L2 12.5Z"
-                stroke="#0A1628"
-                strokeWidth="1.6"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M2 5.5L9 9L16 5.5"
-                stroke="#0A1628"
-                strokeWidth="1.6"
-                strokeLinejoin="round"
-              />
-              <path d="M9 9V16" stroke="#0A1628" strokeWidth="1.6" />
-            </svg>
+    <footer className="border-t border-border-dim pt-20 pb-12 px-6 md:px-[60px]">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+        <div className="col-span-2 md:col-span-1 flex flex-col gap-6">
+          <Link href="/" className="flex items-center gap-[9px] no-underline">
+            <div className="w-8 h-8 bg-[linear-gradient(135deg,var(--color-gold),var(--color-gold-dim))] rounded-lg flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(212,175,55,0.25)]">
+              <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
+                <path d="M2 5.5L9 2L16 5.5V12.5L9 16L2 12.5Z" stroke="#0A1628" strokeWidth="2.0" strokeLinejoin="round" />
+                <path d="M2 5.5L9 9L16 5.5" stroke="#0A1628" strokeWidth="2.0" strokeLinejoin="round" />
+                <path d="M9 9V16" stroke="#0A1628" strokeWidth="2.0" />
+              </svg>
+            </div>
+            <span className="font-serif text-[18px] font-bold tracking-[2.5px] text-ivory uppercase leading-none">
+              Delivami
+            </span>
+          </Link>
+          <p className="text-[14px] text-muted leading-relaxed font-light pr-4">
+            The professional delivery platform for the next generation of African creators.
+          </p>
+          <div className="flex gap-4">
+             <a href="#" className="p-2 border border-border-dim rounded-lg hover:border-gold transition-colors opacity-60 hover:opacity-100">
+               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+             </a>
+             <a href="#" className="p-2 border border-border-dim rounded-lg hover:border-gold transition-colors opacity-60 hover:opacity-100">
+               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+             </a>
           </div>
-          <span className="font-serif text-[14px] font-bold tracking-[2.5px] text-ivory uppercase leading-none">
-            Delivami
-          </span>
-        </Link>
-        <span className="text-[12px] text-muted opacity-50">© 2026 Delivami · A Steady Group Product</span>
-        <span className="text-[12px] text-muted opacity-40">Built for Africans</span>
+        </div>
+
+        <div className="flex flex-col gap-5">
+           <h4 className="text-ivory font-semibold text-[14px] tracking-wide uppercase">Product</h4>
+           <Link href="/case-studies" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Case Studies</Link>
+           <Link href="/#features" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Features</Link>
+           <Link href="/pricing" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Pricing</Link>
+           <Link href="/#how" className="text-muted text-[14px] font-light hover:text-gold transition-colors">How it works</Link>
+        </div>
+
+        <div className="flex flex-col gap-5">
+           <h4 className="text-ivory font-semibold text-[14px] tracking-wide uppercase">Resources</h4>
+           <Link href="/docs" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Documentation</Link>
+           <Link href="/security" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Security</Link>
+           <Link href="/changelog" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Changelog</Link>
+           <Link href="/case-studies#emerging-roles" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Creative Roles</Link>
+           <Link href="/status" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Systems Status</Link>
+        </div>
+
+        <div className="flex flex-col gap-5">
+           <h4 className="text-ivory font-semibold text-[14px] tracking-wide uppercase">Company</h4>
+           <Link href="/about" className="text-muted text-[14px] font-light hover:text-gold transition-colors">About Us</Link>
+           <Link href="/contact" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Contact</Link>
+           <Link href="/privacy" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Privacy Policy</Link>
+           <Link href="/terms" className="text-muted text-[14px] font-light hover:text-gold transition-colors">Terms of Service</Link>
+        </div>
       </div>
-      <div className="flex gap-5">
-        <Link href="#" className="text-[12px] text-muted no-underline opacity-50 transition-all duration-200 hover:opacity-100 hover:text-gold">
-          Twitter
-        </Link>
-        <Link href="#" className="text-[12px] text-muted no-underline opacity-50 transition-all duration-200 hover:opacity-100 hover:text-gold">
-          Instagram
-        </Link>
-        <Link href="#" className="text-[12px] text-muted no-underline opacity-50 transition-all duration-200 hover:opacity-100 hover:text-gold">
-          LinkedIn
-        </Link>
-        <Link href="#" className="text-[12px] text-muted no-underline opacity-50 transition-all duration-200 hover:opacity-100 hover:text-gold">
-          Privacy
-        </Link>
+      
+      <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row items-center justify-between border-t border-border-dim pt-8 gap-4">
+        <span className="text-[12px] text-muted opacity-50">© 2026 Delivami · A Steady Group Product</span>
       </div>
     </footer>
   );

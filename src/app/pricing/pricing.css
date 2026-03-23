@@ -1,0 +1,416 @@
+/* landing-page/src/app/pricing/pricing.css */
+
+.pricing-shell {
+  min-height: 100vh;
+  background: var(--color-navy);
+  color: var(--color-ivory);
+  padding-bottom: 80px;
+}
+
+/* Hero Section */
+.pricing-hero {
+  position: relative;
+  padding: 100px 24px 60px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.ph-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 100px;
+  color: var(--color-gold);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.ph-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-ivory);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  animation: fadeUp 0.8s ease both 0.1s;
+}
+
+.ph-sub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--color-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  animation: fadeUp 0.8s ease both 0.2s;
+}
+
+/* Billing Toggle */
+.billing-toggle {
+  display: inline-flex;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  margin-bottom: 30px;
+  animation: fadeUp 0.8s ease both 0.3s;
+}
+
+.bt-opt {
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-muted);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bt-opt.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-ivory);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bt-save {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Plan Grid */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 100px;
+}
+
+@media (min-width: 768px) {
+  .plan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .plan-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Plan Card */
+.plan-card {
+  position: relative;
+  background: rgba(13, 27, 62, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 28px;
+  padding: 2px;
+  transition: all 0.4s cubic-bezier(0.2, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.2);
+  background: rgba(13, 27, 62, 0.6);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+}
+
+.plan-card.popular {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, rgba(13, 27, 62, 0.4) 100%);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.pc-inner {
+  position: relative;
+  z-index: 2;
+  padding: 36px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: var(--color-navy);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.pc-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+.pc-price {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-ivory);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pc-price span {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.pc-billing {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-bottom: 24px;
+}
+
+.pc-tagline {
+  font-size: 14px;
+  color: var(--color-ivory-dim);
+  line-height: 1.5;
+  margin-bottom: 32px;
+  min-height: 42px;
+}
+
+.pc-cta {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.pc-cta.outline {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-ivory);
+}
+
+.pc-cta.outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pc-cta.gold {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dim));
+  border: none;
+  color: var(--color-navy);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.pc-cta.gold:hover {
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+.pc-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  margin-bottom: 32px;
+}
+
+.pc-feat-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.pc-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13.5px;
+  color: var(--color-ivory-dim);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.pc-feat.muted {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.feat-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Commission Callout */
+.commission-callout {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+  animation: fadeUp 0.8s ease both 0.4s;
+}
+
+.cc-inner {
+  background: rgba(212, 175, 55, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 24px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .cc-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.cc-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cc-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-ivory);
+  margin-bottom: 4px;
+}
+
+.cc-sub {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.cc-number {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 800px;
+  margin: 100px auto 0;
+  padding: 0 24px;
+}
+
+.faq-title {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-ivory);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.faq-q {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  color: var(--color-ivory-dim);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-q:hover {
+  color: var(--color-ivory);
+}
+
+.faq-q svg {
+  transition: transform 0.3s ease;
+  color: var(--color-gold);
+}
+
+.faq-item.open .faq-q svg {
+  transform: rotate(90deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-muted);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding-bottom: 24px;
+}
+
+/* Utils */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

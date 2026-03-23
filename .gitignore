@@ -18,3 +18,11 @@ yarn-error.log*
 # system
 .DS_Store
 Thumbs.db
+
+# next.js
+next-env.d.ts
+*.tsbuildinfo
+
+# logs
+error.txt
+*.log

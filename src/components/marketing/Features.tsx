@@ -166,7 +166,7 @@ export function Features() {
             Built-in Invoicing
           </div>
           <div className="text-[13px] text-muted leading-[1.65] font-light relative z-10">
-            Generate professional invoices in GHS, attach to any project, and collect payment without switching tools.
+            Generate professional invoices in your local currency, attach to any project, and collect payment without switching tools.
           </div>
         </div>
 
@@ -189,10 +189,10 @@ export function Features() {
             </svg>
           </div>
           <div className="text-[16px] font-semibold text-ivory mb-2.5 relative z-10">
-            Paystack & Mobile Money
+            Secure Local Payments
           </div>
           <div className="text-[13px] text-muted leading-[1.65] font-light relative z-10">
-             Accept payment how Ghanaians actually pay. MTN MoMo, Vodafone Cash, Paystack — all natively supported.
+             Accept payment how your clients actually pay. MTN MoMo, Vodafone Cash, and Cards — all natively supported.
           </div>
           <div className="inline-block mt-4 py-1 px-2.5 rounded-full text-[10px] tracking-[1.5px] uppercase font-semibold bg-[rgba(212,175,55,0.08)] text-gold border border-[rgba(212,175,55,0.15)] relative z-10">
             Africa-First

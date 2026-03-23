@@ -85,7 +85,7 @@ export function HowItWorks() {
               Get Paid
             </div>
             <div className="text-[13px] text-muted leading-[1.6] font-light">
-              Invoice attached to the project. Client pays via Paystack or
+              Invoice attached to the project. Client pays via Card or
               mobile money from the same link.
             </div>
           </div>

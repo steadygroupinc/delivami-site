@@ -1,0 +1,1104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.cs-shell {
+  background: #06101D;
+  color: #F2EDE3;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ─── BASE ─── */
+.cs-shell {
+  background: #06101D;
+  color: #F2EDE3;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cs-shell :root {
+  --navy: #06101D;
+  --mid: #0A1622;
+  --card: #0D1D30;
+  --lift: #112540;
+  --gold: #D4AF37;
+  --goldd: #B8962E;
+  --ivory: #F2EDE3;
+  --iv2: rgba(242, 237, 227, 0.62);
+  --iv3: rgba(242, 237, 227, 0.35);
+  --muted: #5E7080;
+  --bdr: rgba(255, 255, 255, 0.068);
+  --bmd: rgba(255, 255, 255, 0.12);
+  --green: #35D073;
+  --amber: #FBBF24;
+  --blue: #5BA4F5;
+  --red: #F87171;
+  --purple: #A78BFA;
+}
+
+.cs-shell .kente {
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #D4AF37 0 13px, #1b3a70 13px 26px, #b03018 26px 38px, #1b3a70 38px 50px, #D4AF37 50px 63px, #1e601a 63px 75px, #1b3a70 75px 88px);
+}
+
+.cs-shell svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ─── LAYOUT ─── */
+.cs-shell .wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* ─── HERO ─── */
+.cs-shell .hero {
+  padding: 100px 60px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-shell .hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 80% at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 55%), radial-gradient(ellipse 40% 50% at 5% 80%, rgba(53, 208, 115, 0.04) 0%, transparent 50%), radial-gradient(ellipse 40% 40% at 95% 30%, rgba(91, 164, 245, 0.04) 0%, transparent 50%);
+}
+
+.cs-shell .hero-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black, transparent 70%);
+}
+
+.cs-shell .hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-shell .hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #D4AF37;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: rgba(212, 175, 55, 0.07);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.cs-shell .hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(46px, 6vw, 76px);
+  font-weight: 700;
+  color: #F2EDE3;
+  letter-spacing: -2px;
+  line-height: .98;
+  margin-bottom: 22px;
+}
+
+.cs-shell .hero-h1 em {
+  display: block;
+  color: #D4AF37;
+  font-style: italic;
+}
+
+.cs-shell .hero-lead {
+  font-size: 17px;
+  color: #5E7080;
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+
+/* Floating quick-link cards in hero right */
+.cs-shell .hero-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cs-shell .hero-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.cs-shell .hero-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateX(5px);
+}
+
+.cs-shell .hc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+
+.cs-shell .hc-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F2EDE3;
+  margin-bottom: 2px;
+}
+
+.cs-shell .hc-sub {
+  font-size: 11px;
+  color: #5E7080;
+}
+
+.cs-shell .hc-arrow {
+  margin-left: auto;
+  color: #5E7080;
+  transition: transform .2s;
+}
+
+.cs-shell .hero-card:hover .hc-arrow {
+  transform: translateX(4px);
+  color: #D4AF37;
+}
+
+/* ─── SECTION UTIL ─── */
+.cs-shell .s-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #D4AF37;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.cs-shell .s-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1.5px;
+  background: #D4AF37;
+  opacity: .55;
+  border-radius: 1px;
+}
+
+.cs-shell .s-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 700;
+  color: #F2EDE3;
+  letter-spacing: -.4px;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.cs-shell .s-h2 em {
+  color: #D4AF37;
+  font-style: italic;
+}
+
+.cs-shell .s-p {
+  font-size: 16px;
+  color: rgba(242, 237, 227, 0.62);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ─── STAT STRIP ─── */
+.cs-shell .stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 56px 0;
+}
+
+.cs-shell .stat-item {
+  padding: 24px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.068);
+  text-align: center;
+  cursor: default;
+  transition: background .18s;
+}
+
+.cs-shell .stat-item:last-child {
+  border-right: none;
+}
+
+.cs-shell .stat-item:hover {
+  background: rgba(255, 255, 255, 0.028);
+}
+
+.cs-shell .si-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.cs-shell .si-label {
+  font-size: 11px;
+  color: #5E7080;
+  line-height: 1.5;
+}
+
+/* ─── FEATURED CASE STUDY ─── */
+.cs-shell .featured-case {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(212, 175, 55, 0.02);
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cs-shell .fc-left {
+  padding: 52px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cs-shell .fc-right {
+  background: #0D1D30;
+  border-left: 1px solid rgba(255, 255, 255, 0.068);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cs-shell .fc-kente-bar {
+  height: 3px;
+  background: repeating-linear-gradient(90deg, #D4AF37 0 10px, #1b3a70 10px 20px, #b03018 20px 30px, #1b3a70 30px 40px, #D4AF37 40px 50px, #1e601a 50px 60px);
+  margin-bottom: 28px;
+}
+
+.cs-shell .fc-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  border: 1px solid;
+}
+
+.cs-shell .fc-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: #F2EDE3;
+  letter-spacing: -.3px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.cs-shell .fc-body {
+  font-size: 14px;
+  color: rgba(242, 237, 227, 0.62);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.cs-shell .fc-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cs-shell .fc-av {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: 1.5px solid;
+}
+
+.cs-shell .fc-pname {
+  font-size: 13px;
+  font-weight: 600;
+  color: #F2EDE3;
+  margin-bottom: 2px;
+}
+
+.cs-shell .fc-prole {
+  font-size: 11px;
+  color: #5E7080;
+}
+
+/* Right panel metrics */
+.cs-shell .fc-metric-label {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #5E7080;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cs-shell .fc-metric-row {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.cs-shell .fc-metric {
+  flex: 1;
+  padding: 14px 12px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+.cs-shell .fc-metric:last-child {
+  border-right: none;
+}
+
+.cs-shell .fm-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.cs-shell .fm-label {
+  font-size: 9.5px;
+  color: #5E7080;
+}
+
+.cs-shell .fc-quote {
+  padding: 16px 18px;
+  border-radius: 0 12px 12px 0;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-left: 3px solid #D4AF37;
+}
+
+.cs-shell .fc-quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(242, 237, 227, 0.62);
+  line-height: 1.6;
+  margin-bottom: 7px;
+}
+
+.cs-shell .fc-quote-attr {
+  font-size: 10px;
+  color: #5E7080;
+}
+
+.cs-shell .btn-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 10px;
+  background: #D4AF37;
+  border: none;
+  color: #06101D;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all .15s;
+  align-self: flex-start;
+}
+
+.cs-shell .btn-read:hover {
+  background: #e0bc3c;
+  transform: translateY(-1px);
+}
+
+/* ─── CASE STUDY GRID ─── */
+.cs-shell .cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 0;
+}
+
+.cs-shell .cs-card {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all .22s;
+  text-decoration: none;
+}
+
+.cs-shell .cs-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+}
+
+.cs-shell .cs-card-top {
+  padding: 24px 24px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.068);
+  flex: 1;
+}
+
+.cs-shell .cs-card-accent {
+  height: 3px;
+  margin-bottom: 0;
+}
+
+.cs-shell .cs-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 9.5px;
+  font-weight: 700;
+  border: 1px solid;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.cs-shell .cs-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #F2EDE3;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.cs-shell .cs-excerpt {
+  font-size: 12.5px;
+  color: #5E7080;
+  line-height: 1.68;
+  margin-bottom: 16px;
+}
+
+.cs-shell .cs-person-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.cs-shell .cs-pav {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid;
+}
+
+.cs-shell .cs-pname {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(242, 237, 227, 0.62);
+}
+
+.cs-shell .cs-ploc {
+  font-size: 10px;
+  color: #5E7080;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 1px;
+}
+
+.cs-shell .cs-card-bottom {
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cs-shell .cs-metric-pair {
+  display: flex;
+  gap: 16px;
+}
+
+.cs-shell .cs-metric {
+  text-align: center;
+}
+
+.cs-shell .cs-mval {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #F2EDE3;
+  line-height: 1;
+}
+
+.cs-shell .cs-mlabel {
+  font-size: 9px;
+  color: #5E7080;
+  margin-top: 2px;
+}
+
+.cs-shell .cs-read-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5E7080;
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.cs-shell .cs-card:hover .cs-read-link {
+  color: #D4AF37;
+}
+
+.cs-shell .cs-arrow {
+  transition: transform .2s;
+}
+
+.cs-shell .cs-card:hover .cs-arrow {
+  transform: translateX(4px);
+}
+
+/* ─── BY ROLE SECTION ─── */
+.cs-shell .role-section {
+  padding: 80px 0;
+  background: #0A1622;
+  border-top: 1px solid rgba(255, 255, 255, 0.068);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+.cs-shell .role-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.cs-shell .role-card {
+  padding: 26px 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: all .22s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-shell .role-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--rc-accent, #D4AF37);
+  opacity: 0;
+  transition: opacity .22s;
+}
+
+.cs-shell .role-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+.cs-shell .role-card:hover::before {
+  opacity: 1;
+}
+
+.cs-shell .rc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  margin-bottom: 16px;
+}
+
+.cs-shell .rc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #F2EDE3;
+  margin-bottom: 6px;
+}
+
+.cs-shell .rc-desc {
+  font-size: 12.5px;
+  color: #5E7080;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.cs-shell .rc-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: auto;
+  transition: color .15s;
+}
+
+/* ─── BY SCALE SECTION ─── */
+.cs-shell .scale-section {
+  padding: 80px 0;
+}
+
+.cs-shell .scale-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+
+.cs-shell .scale-card {
+  padding: 36px 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.068);
+  cursor: pointer;
+  transition: background .18s;
+  text-decoration: none;
+  display: block;
+}
+
+.cs-shell .scale-card:last-child {
+  border-right: none;
+}
+
+.cs-shell .scale-card:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cs-shell .sc-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: .1;
+  margin-bottom: 10px;
+  color: #F2EDE3;
+}
+
+.cs-shell .sc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  margin-bottom: 16px;
+}
+
+.cs-shell .sc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #F2EDE3;
+  margin-bottom: 8px;
+}
+
+.cs-shell .sc-sub {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5E7080;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cs-shell .sc-desc {
+  font-size: 13px;
+  color: #5E7080;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.cs-shell .sc-features {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 24px;
+}
+
+.cs-shell .sc-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(242, 237, 227, 0.62);
+  line-height: 1.5;
+}
+
+.cs-shell .sc-feat-ic {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.cs-shell .sc-cta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5E7080;
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.cs-shell .scale-card:hover .sc-cta {
+  color: #D4AF37;
+}
+
+.cs-shell .sc-arrow {
+  transition: transform .2s;
+}
+
+.cs-shell .scale-card:hover .sc-arrow {
+  transform: translateX(4px);
+}
+
+/* ─── INSIGHTS STRIP ─── */
+.cs-shell .insights-strip {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #06101D 0%, #0A1622 50%, #06101D 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.068);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.068);
+}
+
+.cs-shell .insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.cs-shell .insight-card {
+  padding: 26px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  transition: all .2s;
+  cursor: default;
+}
+
+.cs-shell .insight-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.cs-shell .ic-eyebrow {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #5E7080;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cs-shell .ic-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.cs-shell .ic-label {
+  font-size: 13px;
+  color: rgba(242, 237, 227, 0.62);
+  line-height: 1.65;
+}
+
+/* ─── TESTIMONIAL PULL ─── */
+.cs-shell .testi-pull {
+  padding: 80px 0;
+}
+
+.cs-shell .tp-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cs-shell .tp-quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px;
+  line-height: .8;
+  color: rgba(212, 175, 55, 0.12);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.cs-shell .tp-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  font-style: italic;
+  color: #F2EDE3;
+  line-height: 1.45;
+  margin-bottom: 28px;
+}
+
+.cs-shell .tp-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.cs-shell .tp-av {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1.5px solid rgba(212, 175, 55, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #D4AF37;
+  flex-shrink: 0;
+}
+
+.cs-shell .tp-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F2EDE3;
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.cs-shell .tp-role {
+  font-size: 11px;
+  color: #5E7080;
+  text-align: left;
+}
+
+.cs-shell .tp-kente {
+  height: 3px;
+  max-width: 400px;
+  margin: 24px auto 0;
+  background: repeating-linear-gradient(90deg, #D4AF37 0 8px, #1b3a70 8px 16px, #b03018 16px 24px, #1b3a70 24px 32px, #D4AF37 32px 40px, #1e601a 40px 48px);
+}
+
+/* ─── CTA ─── */
+.cs-shell .cta-sec {
+  padding: 100px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-shell .cta-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212, 175, 55, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cs-shell .cta-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 700;
+  color: #F2EDE3;
+  letter-spacing: -1.5px;
+  line-height: .98;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-shell .cta-h2 em {
+  color: #D4AF37;
+  font-style: italic;
+}
+
+.cs-shell .cta-sub {
+  font-size: 17px;
+  color: #5E7080;
+  margin-bottom: 36px;
+  font-weight: 300;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  line-height: 1.7;
+}
+
+.cs-shell .cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-shell .btn-p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  background: #D4AF37;
+  border: none;
+  color: #06101D;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all .18s;
+}
+
+.cs-shell .btn-p:hover {
+  background: #e0bc3c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(212, 175, 55, 0.25);
+}
+
+.cs-shell .btn-g {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 26px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #5E7080;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all .15s;
+}
+
+.cs-shell .btn-g:hover {
+  color: #F2EDE3;
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+@media (max-width: 768px) {
+  .cs-shell .wrap {
+    padding: 0 24px;
+  }
+  .cs-shell .hero {
+    padding: 60px 24px;
+  }
+  .cs-shell .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .cs-shell .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cs-shell .stat-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs-shell .featured-case {
+    grid-template-columns: 1fr;
+  }
+  .cs-shell .fc-right {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.068);
+  }
+  .cs-shell .cs-grid {
+    grid-template-columns: 1fr;
+  }
+  .cs-shell .role-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs-shell .scale-grid {
+    grid-template-columns: 1fr;
+  }
+  .cs-shell .scale-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.068);
+  }
+  .cs-shell .insight-grid {
+    grid-template-columns: 1fr;
+  }
+}

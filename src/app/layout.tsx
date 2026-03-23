@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Outfit, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-display" });
+const outfit = Outfit({ 
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-outfit" 
+});
+const cormorant = Cormorant_Garamond({ 
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant" 
+});
 
 export const metadata: Metadata = {
   title: "Delivami — Client delivery platform for creatives",
@@ -19,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable} antialiased bg-navy overflow-x-hidden`}>
+      <body className={`${outfit.variable} ${cormorant.variable} antialiased bg-navy overflow-x-hidden`}>
         <PHProvider>
           {children}
         </PHProvider>
