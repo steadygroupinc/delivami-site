@@ -20,9 +20,10 @@ export async function POST(req: Request) {
       create: { email, creatorType, region },
     });
 
-    // Send Confirmation Email
+    // Send Confirmation & Alert Emails
     if (process.env.RESEND_API_KEY) {
       try {
+        // 1. Send Confirmation to User
         await resend.emails.send({
           from: "Delivami <hello@delivami.com>",
           to: email,
@@ -34,6 +35,22 @@ export async function POST(req: Request) {
               <p>We'll let you know when early access opens.</p>
               <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
               <p style="font-size: 14px; color: #8896b3;">&mdash; The Delivami Team<br/>A Steady Group Product</p>
+            </div>
+          `,
+        });
+
+        // 2. Send Alert to Owner
+        await resend.emails.send({
+          from: "Delivami Alerts <alerts@delivami.com>",
+          to: "hello@delivami.com",
+          subject: `New Waitlist Signup: ${email} (${creatorType})`,
+          html: `
+            <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
+              <h2 style="color: #0a1628;">New Waitlist Entry</h2>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Source:</strong> ${creatorType}</p>
+              <p><strong>Region:</strong> ${region || 'Not specified'}</p>
+              <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
             </div>
           `,
         });
