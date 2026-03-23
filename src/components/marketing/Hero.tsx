@@ -1,21 +1,51 @@
 "use client";
 
 import { useState } from "react";
+import { Turnstile } from "../common/Turnstile";
 
 export function Hero() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes("@")) {
-      setError(true);
+      setError("Please enter a valid email address.");
       return;
     }
-    setError(false);
-    setSubmitted(true);
-    // TODO: Connect to backend waitlist API
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-turnstile-token": turnstileToken,
+        },
+        body: JSON.stringify({ 
+          email,
+          creatorType: "waitlist_user",
+          region: "global"
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Failed to connect to the server.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -66,23 +96,36 @@ export function Hero() {
 
       {!submitted ? (
         <form
-          className="animate-fade-up flex flex-col sm:flex-row gap-[10px] w-full max-w-[440px] mx-auto"
+          className="animate-fade-up flex flex-col gap-[10px] w-full max-w-[440px] mx-auto"
           style={{ animationDelay: "0.3s" }}
           onSubmit={handleSubmit}
         >
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={`flex-1 p-[14px_18px] bg-[rgba(255,255,255,0.04)] border ${error ? "border-red-500" : "border-border-dim"} rounded-[10px] text-ivory font-sans text-[14px] outline-none transition-all duration-250 placeholder-muted focus:border-[rgba(212,175,55,0.4)] focus:bg-gold-glow focus:shadow-[0_0_0_3px_rgba(212,175,55,0.07)]`}
-            placeholder="Enter your email address"
+          <div className="flex flex-col sm:flex-row gap-[10px] w-full">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={`flex-1 p-[14px_18px] bg-[rgba(255,255,255,0.04)] border ${error ? "border-red-500" : "border-border-dim"} rounded-[10px] text-ivory font-sans text-[14px] outline-none transition-all duration-250 placeholder-muted focus:border-[rgba(212,175,55,0.4)] focus:bg-gold-glow focus:shadow-[0_0_0_3px_rgba(212,175,55,0.07)]`}
+              placeholder="Enter your email address"
+              required
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className={`p-[14px_24px] border-none rounded-[10px] bg-[linear-gradient(135deg,var(--color-gold),var(--color-gold-dim))] text-navy font-sans text-[14px] font-bold cursor-pointer transition-all duration-250 whitespace-nowrap tracking-[0.2px] hover:-translate-y-[1px] hover:shadow-[0_8px_28px_rgba(212,175,55,0.4)] ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+            >
+              {loading ? "Joining..." : "Get Early Access"}
+            </button>
+          </div>
+          
+          <Turnstile 
+            onVerify={(token) => setTurnstileToken(token)} 
+            options={{ theme: "dark", size: "normal" }}
           />
-          <button
-            type="submit"
-            className="p-[14px_24px] border-none rounded-[10px] bg-[linear-gradient(135deg,var(--color-gold),var(--color-gold-dim))] text-navy font-sans text-[14px] font-bold cursor-pointer transition-all duration-250 whitespace-nowrap tracking-[0.2px] hover:-translate-y-[1px] hover:shadow-[0_8px_28px_rgba(212,175,55,0.4)]"
-          >
-            Get Early Access
-          </button>
+
+          {error && (
+            <p className="text-red-500 text-[12px] mt-2 font-medium">{error}</p>
+          )}
         </form>
       ) : (
         <div className="animate-fade-up p-[14px_24px] bg-[rgba(76,175,80,0.08)] border border-[rgba(76,175,80,0.25)] rounded-[10px] text-[#81c784] text-[14px] w-full max-w-[440px] mx-auto">

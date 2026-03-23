@@ -43,25 +43,31 @@ export default async function middleware(req: NextRequest) {
 
   // 2. Turnstile Validation
   if (shouldProtectWithTurnstile(url.pathname)) {
-    const turnstileToken = req.headers.get('x-turnstile-token') || 
-                          (req.method === 'POST' ? 
-                            await req.clone().json().then(body => body?.turnstileToken).catch(() => null) : 
-                            null);
-    
-    if (!turnstileToken && req.method === 'POST') {
-      return NextResponse.json(
-        { error: 'Security check required. Please complete CAPTCHA.' },
-        { status: 403 }
-      );
-    }
+    const { secureConfig } = require("@/lib/secureConfig");
+    const secretKey = secureConfig.getTurnstileSecretKey();
 
-    if (turnstileToken) {
-      const isValidTurnstile = await validateTurnstile(turnstileToken, ip);
-      if (!isValidTurnstile) {
+    // Only enforce Turnstile if the secret key is configured
+    if (secretKey) {
+      const turnstileToken = req.headers.get('x-turnstile-token') || 
+                            (req.method === 'POST' ? 
+                              await req.clone().json().then(body => body?.turnstileToken).catch(() => null) : 
+                              null);
+      
+      if (!turnstileToken && req.method === 'POST') {
         return NextResponse.json(
-          { error: 'Security check failed. Please try again.' },
+          { error: 'Security check required. Please complete CAPTCHA.' },
           { status: 403 }
         );
+      }
+
+      if (turnstileToken) {
+        const isValidTurnstile = await validateTurnstile(turnstileToken, ip);
+        if (!isValidTurnstile) {
+          return NextResponse.json(
+            { error: 'Security check failed. Please try again.' },
+            { status: 403 }
+          );
+        }
       }
     }
   }
