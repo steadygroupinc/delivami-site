@@ -439,7 +439,7 @@ export default function DesignersCaseStudy() {
           </div>
 
           <div className="solution-grid">
-            <div className="sol-card" style={{"--sol-accent": "var(--purple)"}}>
+            <div className="sol-card" style={{"--sol-accent": "var(--color-purple)" as any}}>
               <div className="sol-num">01</div>
               <div className="sol-icon" style={{background: "var(--purpleg)", borderColor: "var(--purpleb)"}}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -451,7 +451,7 @@ export default function DesignersCaseStudy() {
               <div className="sol-desc">Your logo, your studio colours, your custom domain. Every delivery page looks like it was built by your studio — because it was. Not a Delivami page that happens to have your work on it.</div>
               <div className="sol-detail">Clients see your name in the browser tab, your avatar in the header, and your brand colour on the approve button. Delivami is invisible. You are not.</div>
             </div>
-            <div className="sol-card" style={{"--sol-accent": "var(--blue)"}}>
+            <div className="sol-card" style={{"--sol-accent": "var(--color-blue)" as any}}>
               <div className="sol-num">02</div>
               <div className="sol-icon" style={{background: "rgba(91,164,245,0.1)", borderColor: "rgba(91,164,245,0.28)"}}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -466,7 +466,7 @@ export default function DesignersCaseStudy() {
               <div className="sol-desc">Every iteration is uploaded as a new version. The client always sees the current version by default. Previous versions are archived — viewable and downloadable, but clearly labelled as superseded.</div>
               <div className="sol-detail">No more &quot;which file should I be looking at?&quot; Revision round counts are visible on the project. When v4 is uploaded, v3 is automatically locked.</div>
             </div>
-            <div className="sol-card" style={{"--sol-accent": "var(--gold)"}}>
+            <div className="sol-card" style={{"--sol-accent": "var(--color-gold)" as any}}>
               <div className="sol-num">03</div>
               <div className="sol-icon" style={{background: "rgba(212,175,55,0.1)", borderColor: "rgba(212,175,55,0.28)"}}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
