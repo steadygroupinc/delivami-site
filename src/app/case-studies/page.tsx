@@ -1,15 +1,11 @@
 "use client";
 
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import Link from "next/link";
 import "./case-studies.css";
 
 export default function CaseStudiesPage() {
   return (
-    <>
-      <Navbar />
-      <div className="cs-shell">
+    <>      <div className="cs-shell">
         {/* HERO */}
         <div className="hero">
           <div className="hero-bg"></div>
@@ -189,7 +185,7 @@ export default function CaseStudiesPage() {
 
           <div className="cs-grid">
             {/* Card 1 */}
-            <Link className="cs-card" href="#">
+            <Link className="cs-card" href="/case-studies/photographers">
               <div className="cs-card-accent" style={{ background: 'linear-gradient(90deg, #35D073, rgba(53,208,115,0.4))' }}></div>
               <div className="cs-card-top">
                 <div className="cs-type" style={{ background: 'rgba(53,208,115,0.07)', borderColor: 'rgba(53,208,115,0.2)', color: '#35D073' }}>
@@ -228,7 +224,7 @@ export default function CaseStudiesPage() {
             </Link>
 
             {/* Card 2 */}
-            <Link className="cs-card" href="#">
+            <Link className="cs-card" href="/case-studies/video-editors">
               <div className="cs-card-accent" style={{ background: 'linear-gradient(90deg, #5BA4F5, rgba(91,164,245,0.4))' }}></div>
               <div className="cs-card-top">
                 <div className="cs-type" style={{ background: 'rgba(91,164,245,0.07)', borderColor: 'rgba(91,164,245,0.2)', color: '#5BA4F5' }}>
@@ -263,7 +259,7 @@ export default function CaseStudiesPage() {
             </Link>
 
             {/* Card 3 */}
-            <Link className="cs-card" href="#">
+            <Link className="cs-card" href="/case-studies/designers">
               <div className="cs-card-accent" style={{ background: 'linear-gradient(90deg, #A78BFA, rgba(167,139,250,0.4))' }}></div>
               <div className="cs-card-top">
                 <div className="cs-type" style={{ background: 'rgba(167,139,250,0.07)', borderColor: 'rgba(167,139,250,0.2)', color: '#A78BFA' }}>
@@ -298,7 +294,7 @@ export default function CaseStudiesPage() {
             </Link>
 
             {/* Card 4 */}
-            <Link className="cs-card" href="#">
+            <Link className="cs-card" href="/case-studies/motion-graphics">
               <div className="cs-card-accent" style={{ background: 'linear-gradient(90deg, #FBBF24, rgba(251,191,36,0.4))' }}></div>
               <div className="cs-card-top">
                 <div className="cs-type" style={{ background: 'rgba(251,191,36,0.07)', borderColor: 'rgba(251,191,36,0.2)', color: '#FBBF24' }}>
@@ -333,22 +329,22 @@ export default function CaseStudiesPage() {
             </Link>
 
             {/* Card 5 */}
-            <Link className="cs-card" href="#">
+            <Link className="cs-card" href="/case-studies/studios">
               <div className="cs-card-accent" style={{ background: 'linear-gradient(90deg, #F87171, rgba(248,113,113,0.4))' }}></div>
               <div className="cs-card-top">
                 <div className="cs-type" style={{ background: 'rgba(248,113,113,0.07)', borderColor: 'rgba(248,113,113,0.2)', color: '#F87171' }}>
                   <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                  Agency
+                  Creative Studio
                 </div>
-                <div className="cs-title">An Accra agency managing twelve brands without losing track of a single delivery</div>
-                <p className="cs-excerpt">Five-person agency in Accra handling brand films, social content and identity work simultaneously. The team workspace meant zero internal miscommunication on which version was sent to which client.</p>
+                <div className="cs-title">How a Dakar-based studio scaled to five constant clients without losing track of a single revision</div>
+                <p className="cs-excerpt">For two to five person creative teams, disorganized feedback kills margins. See how this video production studio uses Delivami&apos;s shared workspaces and locked versioning to eliminate review disputes.</p>
                 <div className="cs-person-row">
-                  <div className="cs-pav" style={{ background: 'rgba(248,113,113,0.1)', borderColor: 'rgba(248,113,113,0.25)', color: '#F87171' }}>K</div>
+                  <div className="cs-pav" style={{ background: 'rgba(248,113,113,0.1)', borderColor: 'rgba(248,113,113,0.25)', color: '#F87171' }}>LM</div>
                   <div>
-                    <div className="cs-pname">Kojo Studios</div>
+                    <div className="cs-pname">Léa & Mamadou</div>
                     <div className="cs-ploc">
                       <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                      Accra, Ghana
+                      Dakar, Senegal
                     </div>
                   </div>
                 </div>
@@ -356,8 +352,8 @@ export default function CaseStudiesPage() {
               <div className="cs-card-bottom">
                 <div className="cs-metric-pair">
                   <div className="cs-metric">
-                    <div className="cs-mval" style={{ color: '#F87171' }}>12</div>
-                    <div className="cs-mlabel">Brands managed</div>
+                    <div className="cs-mval" style={{ color: '#F87171' }}>1.2</div>
+                    <div className="cs-mlabel">Avg revisions</div>
                   </div>
                 </div>
                 <div className="cs-read-link">
@@ -392,7 +388,7 @@ export default function CaseStudiesPage() {
             <p className="s-p" style={{ maxWidth: '500px' }}>Different creative roles have different friction points. Each solution page is built around a specific workflow.</p>
 
             <div className="role-grid">
-              <Link className="role-card" href="#" style={{ '--rc-accent': '#5BA4F5' } as any}>
+              <Link className="role-card" href="/case-studies/video-editors" style={{ '--rc-accent': '#5BA4F5' } as any}>
                 <div className="rc-icon" style={{ background: 'rgba(91,164,245,0.1)', borderColor: 'rgba(91,164,245,0.25)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BA4F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
                 </div>
@@ -404,7 +400,7 @@ export default function CaseStudiesPage() {
                 </div>
               </Link>
 
-              <Link className="role-card" href="#" style={{ '--rc-accent': '#35D073' } as any}>
+              <Link className="role-card" href="/case-studies/photographers" style={{ '--rc-accent': '#35D073' } as any}>
                 <div className="rc-icon" style={{ background: 'rgba(53,208,115,0.1)', borderColor: 'rgba(53,208,115,0.25)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#35D073" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
                 </div>
@@ -416,7 +412,7 @@ export default function CaseStudiesPage() {
                 </div>
               </Link>
 
-              <Link className="role-card" href="#" style={{ '--rc-accent': '#A78BFA' } as any}>
+              <Link className="role-card" href="/case-studies/designers" style={{ '--rc-accent': '#A78BFA' } as any}>
                 <div className="rc-icon" style={{ background: 'rgba(167,139,250,0.1)', borderColor: 'rgba(167,139,250,0.25)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
                 </div>
@@ -428,7 +424,7 @@ export default function CaseStudiesPage() {
                 </div>
               </Link>
 
-              <Link className="role-card" href="#" style={{ '--rc-accent': '#FBBF24' } as any}>
+              <Link className="role-card" href="/case-studies/motion-graphics" style={{ '--rc-accent': '#FBBF24' } as any}>
                 <div className="rc-icon" style={{ background: 'rgba(251,191,36,0.1)', borderColor: 'rgba(251,191,36,0.25)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </div>
@@ -452,7 +448,7 @@ export default function CaseStudiesPage() {
 
             <div className="scale-grid">
               {/* Solopreneurs */}
-              <Link className="scale-card" href="#" id="solopreneurs-card">
+              <Link className="scale-card" href="/case-studies/solopreneurs" id="solopreneurs-card">
                 <div className="sc-num">01</div>
                 <div className="sc-icon" style={{ background: 'rgba(212,175,55,0.1)', borderColor: 'rgba(212,175,55,0.28)' }}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -596,17 +592,12 @@ export default function CaseStudiesPage() {
             Ready to deliver like a pro
           </div>
           <h2 className="cta-h2">Your work is too good<br />for <em>WhatsApp delivery.</em></h2>
-          <p className="cta-sub">Join African creatives who have already made the switch. Start free — your first delivery link takes thirty seconds to create.</p>
+          <p className="cta-sub">Join African creatives who have already made the switch. Your first delivery link takes thirty seconds to create.</p>
           <div className="cta-btns">
-            <button className="btn-p">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              Start your free account
-            </button>
-            <button className="btn-g">Browse all case studies</button>
+            
+            <button className="btn-g">Get Early Access</button>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </div>    </>
   );
 }

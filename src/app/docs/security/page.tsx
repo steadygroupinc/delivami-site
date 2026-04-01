@@ -5,7 +5,7 @@ import { ShieldCheck, Lock, Globe, Server } from "lucide-react";
 export default function SecurityDocsPage() {
   return (
     <div className="docs-page">
-      <header className="mb-16">
+      <header className="mb-8">
         <div className="text-gold font-bold text-xs tracking-[0.2em] uppercase mb-4">Trust & Safety</div>
         <h1>Security & Infrastructure</h1>
         <p className="lead">
@@ -18,9 +18,9 @@ export default function SecurityDocsPage() {
       <section id="data-protection">
         <h2>Data Protection</h2>
         <p>
-          All files uploaded to Delivami are encrypted at rest using AES-256 
-          encryption. Our storage layer is built on top of world-class 
-          cloud infrastructure providers.
+          All files uploaded to Delivami are protected with our 
+          standard encryption engine. Our storage layer is built on 
+          the Delivami secure storage infrastructure.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="p-8 bg-navy-mid border border-white/5 rounded-2xl">
@@ -36,13 +36,13 @@ export default function SecurityDocsPage() {
             <h4 className="font-bold mb-2">Encryption in Transit</h4>
             <p className="text-sm text-muted leading-relaxed">
               All data transmitted between your browser and our servers is 
-              protected by 256-bit SSL/TLS encryption.
+              protected by a secure SSL connection.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="infrastructure" className="mt-20">
+      <section id="infrastructure" className="mt-10">
         <h2>Infrastructure</h2>
         <p>
           Delivami is hosted on highly available, redundant server clusters 
@@ -61,12 +61,12 @@ export default function SecurityDocsPage() {
         </div>
       </section>
 
-      <section id="compliance" className="mt-20">
+      <section id="compliance" className="mt-10">
         <h2>Payment Security</h2>
         <p>
           We do not store sensitive payment information on our servers. All 
-          financial transactions are handled by our PCI-DSS Level 1 compliant 
-          payment partners.
+          financial transactions are handled through a secure 
+          payment gateway, ensuring absolute isolation of identity data.
         </p>
         <div className="table-wrapper">
           <table>
@@ -79,11 +79,11 @@ export default function SecurityDocsPage() {
             <tbody>
               <tr>
                 <td className="font-bold">Payments</td>
-                <td>PCI-DSS Level 1 Compliant</td>
+                <td>PCI-DSS Compliant Processing</td>
               </tr>
               <tr>
                 <td className="font-bold">Cloud Data</td>
-                <td>SOC2 Type II / ISO 27001</td>
+                <td>AES-256 Encryption at Rest</td>
               </tr>
               <tr>
                 <td className="font-bold">Authentication</td>

@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import "./contact.css";
 
 function RevealContact({ label, value, href }: { label: string, value: string, href: string }) {
@@ -64,8 +62,6 @@ export default function ContactPage() {
 
   return (
     <div className="contact-shell">
-      <Navbar />
-      
       <main>
         {/* HERO SECTION */}
         <section className="contact-hero">
@@ -117,7 +113,7 @@ export default function ContactPage() {
               <h4 className="text-gold text-[14px] font-bold mb-2">Support & Ticketing</h4>
               <p className="text-muted text-[13px] mb-4">Our team reviews every inquiry personally. Average response time: 24 hours.</p>
               <a 
-                href="https://support.delivamin.com"
+                href="https://support.delivami.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-[12px] font-bold px-4 py-2 bg-gold text-navy rounded-lg hover:bg-goldd transition-colors"
@@ -125,6 +121,7 @@ export default function ContactPage() {
                 Open a Ticket
               </a>
             </div>
+
           </div>
 
           <div className="contact-card" id="contact-form">
@@ -221,7 +218,7 @@ export default function ContactPage() {
               </div>
               <div className="faq-item">
                 <p className="faq-q">Can my clients pay in their local currency?</p>
-                <p className="faq-a">Yes. We support secure payments in various African currencies (GHS, NGN, KES, ZAR, etc.) and stable currencies like USD. We handle the conversion automatically.</p>
+                <p className="faq-a">Yes. We support secure payments in our primary African markets (GHS, NGN, ZAR, XAF) and stable currencies like USD. We handle the conversion automatically.</p>
               </div>
               <div className="faq-item">
                 <p className="faq-q">Do I need a credit card to get started?</p>
@@ -259,8 +256,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
 
       {/* Admin Link - Discretely hidden */}
       <div className="pb-10 text-center opacity-10 hover:opacity-50 transition-opacity">

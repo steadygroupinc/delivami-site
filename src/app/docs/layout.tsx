@@ -18,7 +18,11 @@ import {
   X,
   Key,
   Palette,
-  HelpCircle
+  HelpCircle,
+  ArrowRight,
+  FileText,
+  Activity,
+  UserCheck
 } from "lucide-react";
 import "./docs.css";
 
@@ -57,34 +61,69 @@ export default function DocsLayout({
 
   const navSections = [
     {
-      title: "Introduction",
+      title: "Fundamentals",
       links: [
-        { href: "/docs", label: "Home", icon: <Home size={16} /> },
-        { href: "/docs/getting-started", label: "Quick Start", icon: <Zap size={16} /> },
-        { href: "/docs/client-experience", label: "Client Experience", icon: <BookOpen size={16} /> },
+        { href: "/docs", label: "Overview", icon: <Home size={14} /> },
+        { href: "/docs/getting-started", label: "Quick Start", icon: <Zap size={14} /> },
+        { href: "/docs/onboarding", label: "Onboarding Flow", icon: <ArrowRight size={14} /> },
+        { href: "/docs/troubleshooting", label: "Troubleshooting", icon: <HelpCircle size={14} /> },
       ]
     },
     {
-      title: "Core Features",
+      title: "Financials",
       links: [
-        { href: "/docs/delivery", label: "Secure Delivery", icon: <ShieldCheck size={16} /> },
-        { href: "/docs/payments", label: "Payments & Invoices", icon: <CreditCard size={16} /> },
-        { href: "/docs/branding", label: "Branding & Domains", icon: <Palette size={16} /> },
-        { href: "/docs/teams", label: "Team Workspaces", icon: <Users size={16} /> },
+        { href: "/docs/payments", label: "Payments & Settlement", icon: <CreditCard size={14} /> },
+        { href: "/docs/invoices-payouts", label: "Invoices & Payouts", icon: <FileText size={14} /> },
+        { 
+          label: "Subscription Management", 
+          icon: <Activity size={14} />,
+          subLinks: [
+            { href: "/docs/billing", label: "Billing & Currencies" },
+            { href: "/docs/scaling", label: "On-demand Scaling" },
+          ]
+        },
+      ]
+    },
+    {
+      title: "Studio Ops",
+      links: [
+        { href: "/docs/delivery", label: "Secure Delivery", icon: <ShieldCheck size={14} /> },
+        { href: "/docs/client-experience", label: "Client Experience", icon: <BookOpen size={14} /> },
+        { href: "/docs/collaboration", label: "Collaboration Triggers", icon: <Users size={14} /> },
+        { href: "/docs/automations", label: "Automated Lifecycles", icon: <Zap size={14} /> },
+      ]
+    },
+    {
+      title: "Safety & Trust",
+      links: [
+        { href: "/docs/security", label: "Platform Security", icon: <ShieldCheck size={14} /> },
+        { href: "/docs/security-hardening", label: "Security Hardening", icon: <Key size={14} /> },
+        { href: "/docs/kyc-verification", label: "Identity & KYC", icon: <UserCheck size={14} /> },
+        { href: "/docs/audit-logs", label: "Audit Trail", icon: <Activity size={14} /> },
+      ]
+    },
+    {
+      title: "Branding & Teams",
+      links: [
+        { href: "/docs/branding", label: "Branding & Domains", icon: <Palette size={14} /> },
+        { href: "/docs/teams", label: "Team Workspaces", icon: <Users size={14} /> },
+        { href: "/docs/advanced-settings", label: "Workspace Controls", icon: <Key size={14} /> },
       ]
     },
     {
       title: "Developers",
       links: [
-        { href: "/docs/api", label: "REST API Reference", icon: <Code2 size={16} /> },
-        { href: "/docs/api-keys", label: "Managing Keys", icon: <Key size={16} /> },
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { href: "/docs/security", label: "Security & Infrastructure", icon: <ShieldCheck size={16} /> },
-        { href: "/docs/troubleshooting", label: "Troubleshooting & FAQ", icon: <HelpCircle size={16} /> },
+        { 
+          href: "/docs/api", 
+          label: "REST API Reference", 
+          icon: <Code2 size={14} />,
+          subLinks: [
+            { href: "/docs/api#authentication", label: "Authentication" },
+            { href: "/docs/api#project-management", label: "Projects" },
+            { href: "/docs/api#endpoints-ref", label: "Endpoints" },
+          ]
+        },
+        { href: "/docs/api-keys", label: "API Governance", icon: <Key size={14} /> },
       ]
     }
   ];
@@ -141,35 +180,48 @@ export default function DocsLayout({
       <div className="docs-container docs-main">
         <aside className={`docs-sidebar ${isMobileMenuOpen ? "mobile-open" : ""}`}>
           <nav className="docs-nav">
-            {filteredSections.map((section, idx) => (
+            {navSections.map((section, idx) => (
               <div key={idx} className="docs-nav-section">
                 <h3>{section.title}</h3>
                 <ul>
                   {section.links.map((link, lIdx) => (
                     <li key={lIdx}>
-                      <Link 
-                        href={link.href} 
-                        className={isActive(link.href)}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {link.icon} {link.label}
-                      </Link>
+                      {link.href ? (
+                        <Link 
+                          href={link.href} 
+                          className={pathname === link.href ? "active" : ""}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {link.icon} 
+                          <span>{link.label}</span>
+                        </Link>
+                      ) : (
+                        <div className="nav-group-header">
+                          {link.icon}
+                          <span>{link.label}</span>
+                        </div>
+                      )}
+                      
+                      {link.subLinks && (
+                        <ul className="sub-menu">
+                          {link.subLinks.map((sub, sIdx) => (
+                            <li key={sIdx}>
+                              <Link 
+                                href={sub.href}
+                                className={pathname === sub.href ? "active" : ""}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
-            
-            <div className="docs-nav-section mt-12 pt-8 border-t border-white/5">
-              <h3>Resources</h3>
-              <ul>
-                <li>
-                  <a href="https://support.delivami.com" target="_blank" className="flex items-center gap-3">
-                    <ExternalLink size={16} /> Support Center
-                  </a>
-                </li>
-              </ul>
-            </div>
           </nav>
         </aside>
         
@@ -196,7 +248,7 @@ export default function DocsLayout({
       <footer className="docs-footer">
         <div className="docs-container">
           <p className="font-serif italic text-lg mb-2 text-ivory">Delivami for creators everywhere.</p>
-          <p>&copy; {new Date().getFullYear()} Delivami. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Delivami. Developed for Modern Creative Studios.</p>
         </div>
       </footer>
     </div>

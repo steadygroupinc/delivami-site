@@ -6,8 +6,6 @@ import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { PLANS, AFRICAN_CURRENCIES, getPlanPrice } from "@/lib/plans";
 import { Globe } from "lucide-react";
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import "./pricing.css";
 
 interface Props {
@@ -206,7 +204,6 @@ export default function PricingClient({ user, currencies = AFRICAN_CURRENCIES }:
 
   return (
     <div className="pricing-shell">
-      <Navbar />
       {/* Hero */}
       <div className="pricing-hero">
         <div className="ph-bg" />
@@ -283,7 +280,16 @@ export default function PricingClient({ user, currencies = AFRICAN_CURRENCIES }:
           const current = isCurrentPlan(p.id);
           
           const planData = (PLANS as any)[p.id];
-          const pricing = getPlanPrice(planData, currency, billing, currencies);
+          const pricingRaw = getPlanPrice(planData, currency, billing, currencies);
+          
+          // Round the monthly equivalent to 0 decimals as requested
+          const pricing = {
+            ...pricingRaw,
+            amount: Math.round(pricingRaw.amount),
+            formatted: billing === "annual" 
+              ? `${pricingRaw.currency.symbol}${Math.round(pricingRaw.amount)}`
+              : pricingRaw.formatted
+          };
 
           const billingText =
             p.id === "free"
@@ -368,7 +374,6 @@ export default function PricingClient({ user, currencies = AFRICAN_CURRENCIES }:
         })}
       </div>
 
-      {/* FAQ */}
       <div className="faq-section">
         <div className="faq-title">Frequently asked</div>
 
@@ -388,7 +393,6 @@ export default function PricingClient({ user, currencies = AFRICAN_CURRENCIES }:
           );
         })}
       </div>
-      <Footer />
     </div>
   );
 }

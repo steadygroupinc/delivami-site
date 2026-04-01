@@ -1,13 +1,10 @@
 "use client";
 
 import "./about.css";
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 
 export default function AboutPage() {
   return (
     <div className="about-shell">
-      <Navbar />
 
       {/* ═══════ HERO ═══════ */}
       <div className="hero-about">
@@ -46,7 +43,7 @@ export default function AboutPage() {
         <h1 className="hero-h1-about fu-about d2-about">
           <span className="gold-line-about">Africa&apos;s creatives</span>
           deserve better tools.
-          <span className="dim-line-about">Built here, for every creator across 54 countries.</span>
+          <span className="dim-line-about">Built here, specifically for Africa&apos;s major creative hubs.</span>
         </h1>
 
         <p className="hero-lead-about fu-about d3-about">
@@ -64,28 +61,16 @@ export default function AboutPage() {
             <span className="cr-name-about">Nigeria</span>
           </div>
           <div className="cr-item-about">
-            <span className="cr-flag-about">🇰🇪</span>
-            <span className="cr-name-about">Kenya</span>
-          </div>
-          <div className="cr-item-about">
             <span className="cr-flag-about">🇿🇦</span>
             <span className="cr-name-about">South Africa</span>
-          </div>
-          <div className="cr-item-about">
-            <span className="cr-flag-about">🇸🇳</span>
-            <span className="cr-name-about">Senegal</span>
           </div>
           <div className="cr-item-about">
             <span className="cr-flag-about">🇨🇲</span>
             <span className="cr-name-about">Cameroon</span>
           </div>
-          <div className="cr-item-about">
-            <span className="cr-flag-about">🇪🇹</span>
-            <span className="cr-name-about">Ethiopia</span>
-          </div>
           <div className="cr-more-about">
-            <span className="cr-more-num-about">+47</span>
-            <span className="cr-more-label-about">more countries</span>
+            <span className="cr-more-num-about">4</span>
+            <span className="cr-more-label-about">Primary Markets</span>
           </div>
         </div>
 
@@ -147,8 +132,8 @@ export default function AboutPage() {
                   <div className="sc-map-label-about">
                     <div className="sml-live-about"></div>
                     <div>
-                      <div className="sml-text-about">Active across Africa</div>
-                      <div className="sml-sub-about">54 countries, growing</div>
+                      <div className="sml-text-about">Active in Support Markets</div>
+                      <div className="sml-sub-about">GH, NG, ZA, CM</div>
                     </div>
                   </div>
                 </div>
@@ -162,8 +147,8 @@ export default function AboutPage() {
                     <div className="ss-label-about">External funding — revenue only</div>
                   </div>
                   <div className="sc-stat-about">
-                    <div className="ss-val-about" style={{ color: 'var(--blue)' }}>54</div>
-                    <div className="ss-label-about">African countries in scope</div>
+                    <div className="ss-val-about" style={{ color: 'var(--blue)' }}>4</div>
+                    <div className="ss-label-about">Focused Markets</div>
                   </div>
                   <div className="sc-stat-about">
                     <div className="ss-val-about">1 link</div>
@@ -240,16 +225,12 @@ export default function AboutPage() {
                 </svg>
                 <div className="blip-about" style={{ top: '47%', left: '30%' }}><div className="blip-dot-about" style={{ background: 'var(--gold)', '--bc': 'rgba(212,175,55,0.45)', '--bd': '2.8s', '--bdelay': '0s' } as React.CSSProperties}></div><div className="blip-tip-about">Accra, Ghana</div></div>
                 <div className="blip-about" style={{ top: '42%', left: '44%' }}><div className="blip-dot-about" style={{ background: 'var(--green)', '--bc': 'rgba(53,208,115,0.45)', '--bd': '3s', '--bdelay': '0.5s' } as React.CSSProperties}></div><div className="blip-tip-about">Lagos, Nigeria</div></div>
-                <div className="blip-about" style={{ top: '62%', left: '60%' }}><div className="blip-dot-about" style={{ background: 'var(--blue)', '--bc': 'rgba(91,164,245,0.45)', '--bd': '2.6s', '--bdelay': '1.1s' } as React.CSSProperties}></div><div className="blip-tip-about">Nairobi, Kenya</div></div>
                 <div className="blip-about" style={{ top: '80%', left: '48%' }}><div className="blip-dot-about" style={{ background: 'var(--purple)', '--bc': 'rgba(167,139,250,0.45)', '--bd': '3.2s', '--bdelay': '0.3s' } as React.CSSProperties}></div><div className="blip-tip-about">Johannesburg, SA</div></div>
-                <div className="blip-about" style={{ top: '33%', left: '24%' }}><div className="blip-dot-about" style={{ background: 'var(--amber)', '--bc': 'rgba(251,191,36,0.45)', '--bd': '2.9s', '--bdelay': '0.8s' } as React.CSSProperties}></div><div className="blip-tip-about">Dakar, Senegal</div></div>
-                <div className="blip-about" style={{ top: '20%', left: '52%' }}><div className="blip-dot-about" style={{ background: 'var(--red)', '--bc': 'rgba(248,113,113,0.45)', '--bd': '3.4s', '--bdelay': '1.4s' } as React.CSSProperties}></div><div className="blip-tip-about">Cairo, Egypt</div></div>
-                <div className="blip-about" style={{ top: '50%', left: '55%' }}><div className="blip-dot-about" style={{ background: 'var(--green)', '--bc': 'rgba(53,208,115,0.45)', '--bd': '2.7s', '--bdelay': '0.4s' } as React.CSSProperties}></div><div className="blip-tip-about">Addis Ababa, ET</div></div>
                 <div className="blip-about" style={{ top: '37%', left: '44%' }}><div className="blip-dot-about" style={{ background: 'var(--gold)', '--bc': 'rgba(212,175,55,0.45)', '--bd': '3.1s', '--bdelay': '2s' } as React.CSSProperties}></div><div className="blip-tip-about">Douala, Cameroon</div></div>
               </div>
             </div>
             <div>
-              <div className="s-eyebrow-about">54 Countries. One Platform.</div>
+              <div className="s-eyebrow-about">Optimized for Major Hubs. One Platform.</div>
               <h2 className="s-h2-about">Wherever you create<br/>in Africa, <em>we are there.</em></h2>
               <p className="s-p-about" style={{ marginBottom: '22px' }}>
                 Delivami was designed with pan-African infrastructure from day one. Local payment rails, local currencies, and a deep understanding of how creative work moves on this continent.
@@ -267,28 +248,16 @@ export default function AboutPage() {
                   <span>Nigeria &middot; Transfer</span>
                 </div>
                 <div className="cl-item-about">
-                  <div className="cl-flag-ic-about">🇰🇪</div>
-                  <span>Kenya &middot; M-Pesa</span>
-                </div>
-                <div className="cl-item-about">
                   <div className="cl-flag-ic-about">🇿🇦</div>
                   <span>South Africa &middot; EFT</span>
-                </div>
-                <div className="cl-item-about">
-                  <div className="cl-flag-ic-about">🇸🇳</div>
-                  <span>Senegal &middot; Wave</span>
                 </div>
                 <div className="cl-item-about">
                   <div className="cl-flag-ic-about">🇨🇲</div>
                   <span>Cameroon &middot; MoMo</span>
                 </div>
                 <div className="cl-item-about">
-                  <div className="cl-flag-ic-about">🇪🇹</div>
-                  <span>Ethiopia &middot; Telebirr</span>
-                </div>
-                <div className="cl-item-about">
                   <div className="cl-flag-ic-about">🌍</div>
-                  <span>+47 more expanding</span>
+                  <span>Expansion roadmap in progress</span>
                 </div>
               </div>
             </div>
@@ -658,7 +627,7 @@ export default function AboutPage() {
               </div>
               <div className="tl-body-about">
                 <h3 className="tl-title-about">Scaling Africa</h3>
-                <p className="tl-text-about">Opening access to creatives in 54 countries. Building the permanent home for African creative work.</p>
+                <p className="tl-text-about">Building the permanent home for African creative work in our supported markets.</p>
               </div>
             </div>
           </div>
@@ -711,7 +680,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <Footer />
     </div>
   );
 }

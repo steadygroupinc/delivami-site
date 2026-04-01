@@ -28,7 +28,7 @@ export const config = {
   ],
 };
 
-export default async function middleware(req: NextRequest) {
+export default async function proxy(req: NextRequest) {
   const url = req.nextUrl;
   const ip = req.headers.get("x-forwarded-for") || "local";
   const userAgent = req.headers.get("user-agent");
@@ -73,6 +73,13 @@ export default async function middleware(req: NextRequest) {
   }
 
   const response = NextResponse.next();
+  
+  // CRITICAL: For API routes in development, return immediately to avoid
+  // ERR_CONTENT_LENGTH_MISMATCH caused by adding security headers to streamed/buffered responses.
+  if (url.pathname.startsWith("/api") && process.env.NODE_ENV === 'development') {
+    return response;
+  }
+
   const headers = response.headers;
 
   // Security Headers

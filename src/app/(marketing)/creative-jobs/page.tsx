@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import { 
   Video, 
   Layout, 
@@ -76,7 +74,6 @@ const ROLES = [
 export default function CreativeJobsPage() {
   return (
     <>
-      <Navbar />
       <main className="min-h-screen bg-navy text-ivory selection:bg-gold selection:text-navy">
         {/* Hero Section */}
         <section className="relative pt-[180px] pb-[100px] px-6 md:px-[60px] overflow-hidden">
@@ -107,7 +104,7 @@ export default function CreativeJobsPage() {
                 style={{ animationDelay: `${300 + index * 50}ms` }}
               >
                 <div className="mb-6 w-12 h-12 bg-gold-glow border border-gold/10 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-gold group-hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-                  <role.icon className="w-6 h-6 text-gold transition-colors group-hover:text-navy" />
+                   <role.icon className="w-6 h-6 text-gold transition-colors group-hover:text-navy" />
                 </div>
                 
                 <p className="text-[10px] tracking-[2px] uppercase text-gold/60 font-medium mb-2">
@@ -145,7 +142,6 @@ export default function CreativeJobsPage() {
             </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

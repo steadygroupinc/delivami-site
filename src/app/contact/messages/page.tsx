@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ interface Message {
   createdAt: string;
 }
 
-export default function MessagesPage() {
+function MessagesPageContent() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
@@ -88,5 +88,13 @@ export default function MessagesPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function MessagesPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-navy text-ivory flex items-center justify-center">Loading...</div>}>
+      <MessagesPageContent />
+    </Suspense>
   );
 }

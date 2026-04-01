@@ -1,14 +1,10 @@
 "use client";
 
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import Link from "next/link";
 
 export default function AICreatorsCaseStudy() {
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen pt-24 pb-20 px-6 md:px-[60px] max-w-[1200px] mx-auto overflow-hidden">
+    <>      <main className="min-h-screen pt-24 pb-20 px-6 md:px-[60px] max-w-[1200px] mx-auto overflow-hidden">
         {/* Hero */}
         <section className="text-center mb-32 relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-glow blur-[120px] opacity-20 -z-10" />
@@ -98,15 +94,11 @@ export default function AICreatorsCaseStudy() {
         {/* Final CTA */}
         <section className="text-center py-20 border-t border-border-dim flex flex-col items-center">
            <h2 className="font-serif text-[42px] font-bold text-ivory mb-6 tracking-[-1px]">Scale your AI business today?</h2>
-           <Link href="https://app.delivami.com/register" className="bg-gold text-navy font-bold px-10 py-5 rounded-2xl hover:shadow-[0_12px_40px_rgba(212,175,55,0.3)] transition-all">
-              Start Free Trial
-           </Link>
+           
            <Link href="/case-studies" className="mt-8 text-muted hover:text-gold text-[14px] transition-colors flex items-center gap-2">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5m7 7-7-7 7-7"/></svg> Back to Case Studies
            </Link>
         </section>
-      </main>
-      <Footer />
-    </>
+      </main>    </>
   );
 }

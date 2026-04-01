@@ -20,6 +20,8 @@ export const metadata: Metadata = {
 };
 
 import { PHProvider } from "@/providers/PostHogProvider";
+import { Navbar } from "@/components/marketing/Navbar";
+import { Footer } from "@/components/marketing/Footer";
 
 export default function RootLayout({
   children,
@@ -28,9 +30,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${cormorant.variable} antialiased bg-navy overflow-x-hidden`}>
+      <body className={`${outfit.variable} ${cormorant.variable} antialiased bg-navy overflow-x-hidden flex flex-col min-h-screen`}>
         <PHProvider>
-          {children}
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
         </PHProvider>
       </body>
     </html>

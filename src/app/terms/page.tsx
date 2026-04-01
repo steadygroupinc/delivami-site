@@ -1,14 +1,10 @@
 "use client";
 
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
-
 export default function TermsPage() {
   const lastUpdated = "March 20, 2026";
   
   return (
     <>
-      <Navbar />
       <main className="min-h-screen pt-24 pb-20 px-6 md:px-[60px] max-w-[900px] mx-auto">
         <header className="mb-16">
           <h1 className="font-serif text-[48px] font-bold text-ivory mb-4 tracking-[-1px]">Terms of Service</h1>
@@ -63,7 +59,6 @@ export default function TermsPage() {
            <p className="text-muted text-[14px]">If you have any questions about these Terms, please contact us at <a href="mailto:support@delivami.com" className="text-gold font-semibold hover:underline">support@delivami.com</a>.</p>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

@@ -1,89 +1,61 @@
 // src/app/docs/branding/page.tsx
 import React from "react";
-import { Globe, Palette, Camera, Fingerprint, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { Globe, Palette, Camera, Fingerprint, CheckCircle2, Share2, Layers, ShieldCheck } from "lucide-react";
 
 export default function BrandingDocsPage() {
   return (
-    <div className="docs-page">
-      <header className="mb-16">
-        <div className="flex items-center gap-3 text-gold font-bold text-xs tracking-[0.2em] uppercase mb-4">
-          <Fingerprint size={16} /> Identity & White-labeling
-        </div>
-        <h1>Branding & Domains</h1>
-        <p className="lead">
-          Make Delivami yours. Personalize every touchpoint your clients see 
-          with your own logos, colors, and a custom domain.
+    <div className="docs-page max-w-4xl">
+      <header className="mb-10">
+        <h1 className="text-3xl font-bold mb-4">Branding & Domains</h1>
+        <p className="text-sm text-muted font-light leading-relaxed max-w-2xl">
+          Personalize your studio's visual footprint through custom 
+          palettes and white-label domains.
         </p>
       </header>
 
-      <section id="basics">
-        <h2 id="brand-basics">Brand Basics</h2>
-        <p>
-          Your brand identity is applied to every project link, invoice, and 
-          email notification sent from your organization.
+      <div className="space-y-12">
+      <section id="identity" className="mb-8">
+        <h2 className="text-lg font-bold mb-3">Brand Identity</h2>
+        <p className="text-sm text-muted leading-relaxed m-0">
+          Upload your studio logo and favicon to skin the interface, 
+          email ecosystem, and invoice metadata.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-          <div className="p-8 bg-navy-mid border border-white/5 rounded-2xl">
-            <Camera size={32} className="text-gold mb-4" />
-            <h4 className="font-bold mb-2">Logo & Favicon</h4>
-            <p className="text-sm text-muted">
-              Upload your high-res logo to replace the Delivami branding on 
-              client delivery pages.
-            </p>
-          </div>
-          <div className="p-8 bg-navy-mid border border-white/5 rounded-2xl">
-            <Palette size={32} className="text-gold mb-4" />
-            <h4 className="font-bold mb-2">Custom Colors</h4>
-            <p className="text-sm text-muted">
-              Set your primary brand color. We'll automatically generate 
-              accessible shades for buttons, links, and accents.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="domains" className="mt-20">
-        <h2 id="custom-domains">Custom Domains</h2>
-        <p>
-          On the <strong>Studio</strong> plan, you can host your projects on your own domain 
-          (e.g., <code>deliveries.yourstudio.com</code>) for a completely 
-          seamless white-label experience.
-        </p>
-        <div className="p-8 bg-gold/5 border border-gold/10 rounded-2xl">
-          <h4 className="flex items-center gap-2 mb-4"><Globe size={18} className="text-gold" /> DNS Configuration</h4>
-          <p className="text-sm text-muted mb-4">
-            To set up a custom domain, you'll need to add a CNAME record to your 
-            DNS provider pointing to <code>cname.delivami.com</code>.
+        <div className="border-l border-gold/20 pl-4 py-1 my-4">
+          <p className="m-0 text-[11px] text-muted leading-relaxed">
+            <span className="text-gold font-bold">Studio Tier:</span> Custom 
+            branding (removing Delivami signatures) is exclusive to the Studio plan.
           </p>
-          <div className="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Hostname</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="font-mono text-xs">CNAME</td>
-                  <td className="font-mono text-xs">deliveries</td>
-                  <td className="font-mono text-xs">cname.delivami.com</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </section>
 
-      <section id="experience" className="mt-20 pt-12 border-t border-white/5 text-center">
-        <CheckCircle2 size={40} className="text-gold mx-auto mb-6" />
-        <h3 className="mt-0">Strengthen your professionalism</h3>
-        <p className="max-w-md mx-auto text-muted">
-          A branded experience builds trust. Clients are 30% more likely to 
-          approve work faster when delivered through a professional, branded portal.
+      <section id="domains" className="mb-0">
+        <h2 className="text-lg font-bold mb-3">Custom Domains</h2>
+        <p className="text-sm text-muted leading-relaxed m-0">
+          Host projects on your own domain (e.g., <code>portal.yourstudio.com</code>) 
+          for a professional experience.
         </p>
+        <div className="mt-6 p-6 border border-white/5 rounded-lg bg-white/[0.01]">
+          <div className="text-[10px] uppercase tracking-widest text-gold font-bold mb-3">DNS Configuration</div>
+          <div className="space-y-2 font-mono text-[10px]">
+            <div className="flex justify-between border-b border-white/5 pb-1">
+              <span className="opacity-40 uppercase">Type</span>
+              <span className="text-gold">CNAME</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="opacity-40 uppercase">Value</span>
+              <span className="text-gold">cname.delivami.com</span>
+            </div>
+          </div>
+        </div>
       </section>
+      </div>
+
+      <footer className="mt-16 pt-8 border-t border-white/5">
+        <p className="text-[11px] text-muted">
+          Looking for team collaboration? View <Link href="/docs/teams" className="text-gold hover:underline">Team Workspaces</Link>.
+        </p>
+      </footer>
     </div>
   );
 }

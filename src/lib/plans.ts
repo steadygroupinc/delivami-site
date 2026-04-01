@@ -66,15 +66,10 @@ export interface CurrencyConfig {
 
 export const AFRICAN_CURRENCIES: Record<string, CurrencyConfig> = {
     USD: { code: "USD", symbol: "$", rate: 1, name: "US Dollar" },
-    GHS: { code: "GHS", symbol: "₵", rate: 10.91, name: "Ghanaian Cedi" },
-    NGN: { code: "NGN", symbol: "₦", rate: 1355.57, name: "Nigerian Naira" },
-    KES: { code: "KES", symbol: "KSh", rate: 129.35, name: "Kenyan Shilling" },
-    ZAR: { code: "ZAR", symbol: "R", rate: 16.80, name: "South African Rand" },
-    XOF: { code: "XOF", symbol: "CFA", rate: 570.50, name: "West African CFA franc" },
-    EGP: { code: "EGP", symbol: "E£", rate: 52.25, name: "Egyptian Pound" },
-    UGX: { code: "UGX", symbol: "USh", rate: 3767.68, name: "Ugandan Shilling" },
-    MAD: { code: "MAD", symbol: "DH", rate: 9.36, name: "Moroccan Dirham" },
-    ETB: { code: "ETB", symbol: "Br", rate: 157.00, name: "Ethiopian Birr" },
+    GHS: { code: "GHS", symbol: "₵", rate: 14.50, name: "Ghanaian Cedi" },
+    NGN: { code: "NGN", symbol: "₦", rate: 1550.00, name: "Nigerian Naira" },
+    ZAR: { code: "ZAR", symbol: "R", rate: 19.00, name: "South African Rand" },
+    XAF: { code: "XAF", symbol: "CFA", rate: 605.00, name: "Central African CFA franc" },
 };
 
 export const PLANS: Record<PlanId, PlanConfig> = {
@@ -122,10 +117,10 @@ export const PLANS: Record<PlanId, PlanConfig> = {
         paystackMonthlyCode: process.env.PAYSTACK_PLAN_CREATOR_MONTHLY || null,
         paystackAnnualCode: process.env.PAYSTACK_PLAN_CREATOR_ANNUAL || null,
         localMonthlyPrices: {
-            GHS: 76.37, NGN: 9488.99, KES: 905.45, ZAR: 117.60, XOF: 3993.50, EGP: 365.75, UGX: 26373.76, MAD: 65.52, ETB: 1099.00
+            GHS: 101.50, NGN: 10850, ZAR: 133, XAF: 4235
         },
         localAnnualPrices: {
-            GHS: 763.70, NGN: 94889.90, KES: 9054.50, ZAR: 1175.30, XOF: 39935.00, EGP: 3656.10, UGX: 263737.60, MAD: 655.20, ETB: 10990.00
+            GHS: 1015, NGN: 108500, ZAR: 1330, XAF: 42350
         },
         limits: { projects: 25, storageGB: 50, storageGBPerProject: 5, teamMembers: 1 }, 
         features: {
@@ -163,10 +158,10 @@ export const PLANS: Record<PlanId, PlanConfig> = {
         paystackMonthlyCode: process.env.PAYSTACK_PLAN_PRO_MONTHLY || null,
         paystackAnnualCode: process.env.PAYSTACK_PLAN_PRO_ANNUAL || null,
         localMonthlyPrices: {
-            GHS: 163.65, NGN: 20333.55, KES: 1940.25, ZAR: 252.00, XOF: 8557.50, EGP: 783.75, UGX: 56515.20, MAD: 140.40, ETB: 2355.00
+            GHS: 217.50, NGN: 23250, ZAR: 285, XAF: 9075
         },
         localAnnualPrices: {
-            GHS: 1636.50, NGN: 203335.50, KES: 19402.50, ZAR: 2518.50, XOF: 85575.00, EGP: 7834.50, UGX: 565152.00, MAD: 1404.00, ETB: 23550.00
+            GHS: 2175, NGN: 232500, ZAR: 2850, XAF: 90750
         },
         limits: { projects: "unlimited", storageGB: 150, storageGBPerProject: "unlimited", teamMembers: 1 }, 
         features: {
@@ -203,10 +198,10 @@ export const PLANS: Record<PlanId, PlanConfig> = {
         paystackMonthlyCode: process.env.PAYSTACK_PLAN_AGENCY_MONTHLY || null,
         paystackAnnualCode: process.env.PAYSTACK_PLAN_AGENCY_ANNUAL || null,
         localMonthlyPrices: {
-            GHS: 436.40, NGN: 54222.80, KES: 5174.00, ZAR: 671.60, XOF: 22820.00, EGP: 2089.20, UGX: 150707.20, MAD: 374.40, ETB: 6280.00
+            GHS: 580, NGN: 62000, ZAR: 760, XAF: 24200
         },
         localAnnualPrices: {
-            GHS: 4364.00, NGN: 542228.00, KES: 51740.00, ZAR: 6716.00, XOF: 228200.00, EGP: 20896.00, UGX: 1507072.00, MAD: 3744.00, ETB: 62800.00
+            GHS: 5800, NGN: 620000, ZAR: 7600, XAF: 242000
         },
         limits: { projects: "unlimited", storageGB: 500, teamMembers: 5 }, 
         features: {

@@ -132,7 +132,7 @@ export function Features() {
             Timestamped Comments
           </div>
           <div className="text-[13px] text-muted leading-[1.65] font-light relative z-10">
-            Clients comment at specific moments in your video. Like Frame.io — but priced for Ghana, not San Francisco.
+            Clients comment at specific moments in your video. Like Frame.io — but priced for our target African markets, not San Francisco.
           </div>
         </div>
 

@@ -26,7 +26,7 @@ export default function DesignersCaseStudy() {
           <a href="#" className="nav-link active">Case Studies</a>
           <a href="#" className="nav-link">Blog</a>
         </div>
-        <button className="nav-cta">Start free</button>
+        
       </nav>
 
       <div className="breadcrumb">
@@ -69,12 +69,7 @@ export default function DesignersCaseStudy() {
               <div className="hs-val"><span>100%</span> white-labelled</div>
             </div>
             <div className="hs-item">
-              <Link href="https://app.delivami.com/register" className="btn-purple">
-                Start free
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m9 18 6-6-6-6"/>
-                </svg>
-              </Link>
+              
             </div>
           </div>
 
@@ -439,7 +434,7 @@ export default function DesignersCaseStudy() {
           </div>
 
           <div className="solution-grid">
-            <div className="sol-card" style={{"--sol-accent": "var(--color-purple)" as any}}>
+            <div className="sol-card" style={{"--sol-accent": "var(--color-purple)"} as any}>
               <div className="sol-num">01</div>
               <div className="sol-icon" style={{background: "var(--purpleg)", borderColor: "var(--purpleb)"}}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -451,7 +446,7 @@ export default function DesignersCaseStudy() {
               <div className="sol-desc">Your logo, your studio colours, your custom domain. Every delivery page looks like it was built by your studio — because it was. Not a Delivami page that happens to have your work on it.</div>
               <div className="sol-detail">Clients see your name in the browser tab, your avatar in the header, and your brand colour on the approve button. Delivami is invisible. You are not.</div>
             </div>
-            <div className="sol-card" style={{"--sol-accent": "var(--color-blue)" as any}}>
+            <div className="sol-card" style={{"--sol-accent": "var(--color-blue)"} as any}>
               <div className="sol-num">02</div>
               <div className="sol-icon" style={{background: "rgba(91,164,245,0.1)", borderColor: "rgba(91,164,245,0.28)"}}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -466,7 +461,7 @@ export default function DesignersCaseStudy() {
               <div className="sol-desc">Every iteration is uploaded as a new version. The client always sees the current version by default. Previous versions are archived — viewable and downloadable, but clearly labelled as superseded.</div>
               <div className="sol-detail">No more &quot;which file should I be looking at?&quot; Revision round counts are visible on the project. When v4 is uploaded, v3 is automatically locked.</div>
             </div>
-            <div className="sol-card" style={{"--sol-accent": "var(--color-gold)" as any}}>
+            <div className="sol-card" style={{"--sol-accent": "var(--color-gold)"} as any}>
               <div className="sol-num">03</div>
               <div className="sol-icon" style={{background: "rgba(212,175,55,0.1)", borderColor: "rgba(212,175,55,0.28)"}}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -730,14 +725,14 @@ export default function DesignersCaseStudy() {
                       <path d="M20 6 9 17l-5-5"/>
                     </svg>
                   </div>
-                  Client pays via EFT from the payment link. Funds arrive same day. Sipho downloads the receipt. Project closed.
+                  Client pays via EFT from the payment link. Funds are typically settled to your Mobile Money or Bank account within 24-48 hours of a successful client payment through our secure payout gateway. Sipho downloads the receipt. Project closed.
                 </div>
               </div>
               <div className="ba-summary" style={{color: "var(--green)"}}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 6 9 17l-5-5"/>
                 </svg>
-                2 revision rounds · Same-day payment
+                2 revision rounds · Payment within 24-48 hours
               </div>
             </div>
           </div>
@@ -750,25 +745,25 @@ export default function DesignersCaseStudy() {
           <div style={{textAlign: "center", maxWidth: "520px", margin: "0 auto"}}>
             <div className="s-eyebrow" style={{justifyContent: "center"}}>The numbers</div>
             <h2 className="s-h2" style={{textAlign: "center"}}>What design studios<br/>report after <em>switching.</em></h2>
-            <p className="s-p" style={{textAlign: "center", maxWidth: "420px", margin: "0 auto"}}>Across designers in Ghana, South Africa, Nigeria and Senegal using Delivami for brand identity and UI/UX delivery.</p>
+            <p className="s-p" style={{textAlign: "center", maxWidth: "420px", margin: "0 auto"}}>Across designers in Ghana, South Africa, Nigeria and Cameroon using Delivami for brand identity and UI/UX delivery.</p>
           </div>
           <div className="impact-row">
-            <div className="impact-item" style={{"--ii-glow": "rgba(167,139,250,0.12)"}}>
+            <div className="impact-item" style={{"--ii-glow": "rgba(167,139,250,0.12)"} as any}>
               <div className="ii-val" style={{color: "var(--purple)"}}>100%</div>
               <div className="ii-label">Brand consistency on every delivery — no platform branding visible to clients</div>
               <div className="ii-detail">was 0% white-labelled</div>
             </div>
-            <div className="impact-item" style={{"--ii-glow": "rgba(91,164,245,0.1)"}}>
+            <div className="impact-item" style={{"--ii-glow": "rgba(91,164,245,0.1)"} as any}>
               <div className="ii-val" style={{color: "var(--blue)"}}>50%</div>
               <div className="ii-label">Reduction in review friction with clean version history and locked iterations</div>
               <div className="ii-detail">was avg 4+ rounds · now 2</div>
             </div>
-            <div className="impact-item" style={{"--ii-glow": "rgba(212,175,55,0.1)"}}>
+            <div className="impact-item" style={{"--ii-glow": "rgba(212,175,55,0.1)"} as any}>
               <div className="ii-val" style={{color: "var(--gold)"}}>0</div>
               <div className="ii-label">Scope creep disputes for designers with a timestamped sign-off on record</div>
               <div className="ii-detail">was the standard experience</div>
             </div>
-            <div className="impact-item" style={{"--ii-glow": "rgba(53,208,115,0.1)"}}>
+            <div className="impact-item" style={{"--ii-glow": "rgba(53,208,115,0.1)"} as any}>
               <div className="ii-val" style={{color: "var(--green)"}}>2x</div>
               <div className="ii-label">Higher perceived project value reported by clients viewing branded delivery pages</div>
               <div className="ii-detail">professionalism drives price</div>
@@ -805,7 +800,7 @@ export default function DesignersCaseStudy() {
                 <div className="tw-sl">Scope creep disputes since switching</div>
               </div>
               <div className="tw-stat">
-                <div className="tw-sv" style={{color: "var(--green)"}}>Same day</div>
+                <div className="tw-sv" style={{color: "var(--green)"}}>Within 24-48 hours</div>
                 <div className="tw-sl">Payment after client approval via EFT</div>
               </div>
             </div>
@@ -885,7 +880,7 @@ export default function DesignersCaseStudy() {
                   </div>
                   <div className="wt-body" style={{paddingBottom: "0"}}>
                     <div className="wt-title" style={{color: "var(--gold)"}}>Mobile payment replaces the invoice chase</div>
-                    <div className="wt-text">Invoice created from the approval screen in one click. Client pays via EFT, MoMo or mobile banking. Funds arrive the same day. No follow-up required.</div>
+                    <div className="wt-text">Invoice created from the approval screen in one click. Client pays via EFT, MoMo or mobile banking. Funds arrive the within 24-48 hours. No follow-up required.</div>
                   </div>
                 </div>
               </div>
@@ -1008,15 +1003,9 @@ export default function DesignersCaseStudy() {
           Own your client experience
         </div>
         <h2 className="cta-h2">Your brand identity<br/>deserves a <em>better stage.</em></h2>
-        <p className="cta-sub">Start free. Your first branded delivery page takes thirty seconds to create.</p>
+        <p className="cta-sub">Your first branded delivery page takes thirty seconds to create.</p>
         <div className="cta-btns">
-          <button className="btn-p">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14"/>
-              <path d="m12 5 7 7-7 7"/>
-            </svg>
-            Start your free account
-          </button>
+          
           <button className="btn-g">View all case studies</button>
         </div>
         <a href="#" className="back-link" style={{display: "flex", margin: "16px auto 0", width: "fit-content"}}>
@@ -1183,7 +1172,7 @@ function BACard({ type, rows, summary }: { type: string, rows: string[], summary
 
 function ImpactItem({ val, label, detail, color }: { val: string, label: string, detail: string, color: string }) {
   return (
-    <div className="impact-item" style={{ ['--ii-glow' as any]: `var(--${color}g)` }}>
+    <div className="impact-item" style={{ ['--ii-glow' as any]: `var(--${color}g)` } as any}>
       <div className="ii-val" style={{ color: `var(--${color})` }}>{val}</div>
       <div className="ii-label">{label}</div>
       <div className="ii-detail">{detail}</div>
@@ -1239,4 +1228,10 @@ function RoleCard({ title, sub, color, href }: { title: string, sub: string, col
       </div>
     </Link>
   );
+}
+
+function HeroIcon({ type, color }: { type: string, color: string }) {
+  if (type === "video") return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>;
+  if (type === "pack") return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>;
+  return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>;
 }

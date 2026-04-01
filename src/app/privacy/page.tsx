@@ -1,14 +1,10 @@
 "use client";
 
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
-
 export default function PrivacyPage() {
   const lastUpdated = "March 20, 2026";
   
   return (
     <>
-      <Navbar />
       <main className="min-h-screen pt-24 pb-20 px-6 md:px-[60px] max-w-[900px] mx-auto">
         <header className="mb-16">
           <h1 className="font-serif text-[48px] font-bold text-ivory mb-4 tracking-[-1px]">Privacy Policy</h1>
@@ -69,7 +65,6 @@ export default function PrivacyPage() {
            <a href="mailto:privacy@delivami.com" className="text-gold font-semibold hover:underline">privacy@delivami.com</a>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

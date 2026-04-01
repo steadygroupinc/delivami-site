@@ -1,14 +1,10 @@
 "use client";
 
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import Link from "next/link";
 
 export default function PhotographersCaseStudy() {
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen pt-24 pb-20 px-6 md:px-[60px] max-w-[1200px] mx-auto overflow-hidden">
+    <>      <main className="min-h-screen pt-24 pb-20 px-6 md:px-[60px] max-w-[1200px] mx-auto overflow-hidden">
         {/* Hero */}
         <section className="text-center mb-32 relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[rgba(53,208,115,0.1)] blur-[120px] opacity-20 -z-10" />
@@ -102,8 +98,6 @@ export default function PhotographersCaseStudy() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5m7 7-7-7 7-7"/></svg> Back to Case Studies
            </Link>
         </section>
-      </main>
-      <Footer />
-    </>
+      </main>    </>
   );
 }

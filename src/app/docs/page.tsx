@@ -1,140 +1,62 @@
-// src/app/docs/page.tsx
 import React from "react";
 import Link from "next/link";
-import { 
-  Zap, 
-  CreditCard, 
-  Users, 
-  ArrowRight,
-  Terminal,
-  Lock,
-  Smartphone,
-  Palette,
-  ShieldCheck,
-  HelpCircle
-} from "lucide-react";
+// Removing generic lucide-react imports for custom premium SVGs
 
 export default function DocsHomePage() {
   return (
-    <div className="docs-home">
-      <header className="mb-16">
-        <div className="text-gold font-bold text-xs tracking-[0.2em] uppercase mb-4">Welcome to Delivami Docs</div>
-        <h1>Your work. Their approval. One link.</h1>
-        <p className="lead">
-          Delivami gives professional creators a world-class way to deliver work, 
-          manage client approvals, and get paid reliably from anywhere in the world.
+    <div className="docs-home relative">
+      <header className="mb-10">
+        <h1 className="text-3xl font-bold mb-4">Documentation</h1>
+        <p className="text-sm text-muted font-light leading-relaxed max-w-2xl">
+          Learn how to deliver high-res media, manage client approvals, 
+          and capture international payments with Delivami.
         </p>
       </header>
 
-      <section id="quick-start">
-        <h2 id="quick-start-title">Quick start</h2>
-        <p>Get up and running with Delivami in minutes. Choose a path below to begin.</p>
-        
-        <div className="grid-cards">
-          <Link href="/docs/payments" className="docs-card">
-            <div className="docs-card-icon">
-              <CreditCard size={24} />
-            </div>
-            <h4>Accept Payments</h4>
-            <p>Generate professional invoices and collect payments securely via global and local methods.</p>
+      <section id="guides">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Link href="/docs/collaboration" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Collaboration</h4>
+            <p className="text-[11px] text-muted m-0">Approvals, revisions, and threaded feedback.</p>
           </Link>
-
-          <Link href="/docs/delivery" className="docs-card">
-            <div className="docs-card-icon">
-              <ShieldCheck size={24} />
-            </div>
-            <h4>Deliver Work</h4>
-            <p>Secure your assets with passwords, watermarks, and pay-before-download locks.</p>
+          <Link href="/docs/automations" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Automations</h4>
+            <p className="text-[11px] text-muted m-0">In-depth status lifecycles and webhooks.</p>
           </Link>
-
-          <Link href="/docs/getting-started" className="docs-card">
-            <div className="docs-card-icon">
-              <Zap size={24} />
-            </div>
-            <h4>First Project</h4>
-            <p>A step-by-step guide to setting up your workspace and sending your first link.</p>
+          <Link href="/docs/billing" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Billing</h4>
+            <p className="text-[11px] text-muted m-0">Currencies, cycles, and platform fees.</p>
           </Link>
-
-          <Link href="/docs/api" className="docs-card">
-            <div className="docs-card-icon">
-              <Terminal size={24} />
-            </div>
-            <h4>Developer Tools</h4>
-            <p>Explore our API and integrate Delivami into your existing creative workflows.</p>
+          <Link href="/docs/scaling" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Scaling</h4>
+            <p className="text-[11px] text-muted m-0">Add-ons for storage and team expansion.</p>
           </Link>
-
-          <Link href="/docs/branding" className="docs-card">
-            <div className="docs-card-icon">
-              <Palette size={24} />
-            </div>
-            <h4>Branding & Domains</h4>
-            <p>Make every project yours with custom logos, colors, and white-labeled domains.</p>
+          <Link href="/docs/organization" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Organization</h4>
+            <p className="text-[11px] text-muted m-0">Asset hierarchy and unified search.</p>
           </Link>
-
-          <Link href="/docs/security" className="docs-card">
-            <div className="docs-card-icon">
-              <ShieldCheck size={24} />
-            </div>
-            <h4>Trust & Security</h4>
-            <p>Learn how we protect your creative assets and financial data with enterprise encryption.</p>
+          <Link href="/docs/security-hardening" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Hardening</h4>
+            <p className="text-[11px] text-muted m-0">2FA, session logic, and audit trails.</p>
           </Link>
-
-          <Link href="/docs/troubleshooting" className="docs-card">
-            <div className="docs-card-icon">
-              <HelpCircle size={24} />
-            </div>
-            <h4>Troubleshooting</h4>
-            <p>Find answers to common questions about trials, payouts, and project management.</p>
+          <Link href="/docs/advanced-settings" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Advanced Settings</h4>
+            <p className="text-[11px] text-muted m-0">KYC, Branding, and DNS Management.</p>
+          </Link>
+          <Link href="/docs/api" className="premium-card !p-4 !rounded-lg bg-white/[0.02] hover:bg-white/[0.04]">
+            <h4 className="text-sm font-bold mb-1">Developer API</h4>
+            <p className="text-[11px] text-muted m-0">RESTful endpoints and technical triggers.</p>
           </Link>
         </div>
       </section>
 
-      <section id="popular" className="mt-24 pt-12 border-t border-white/5">
-        <h2 id="popular-guides">Popular Guides</h2>
-        
-        <div className="space-y-12 mt-8">
-          <Link href="/docs/delivery" className="flex gap-8 group cursor-pointer border-b border-white/5 pb-8 no-underline">
-            <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold bg-gold/5 group-hover:bg-gold/10 transition-colors">
-              <Lock size={20} />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-semibold mb-2 flex items-center gap-2 text-ivory group-hover:text-gold transition-colors">
-                Secure Client Portals <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h4>
-              <p className="text-muted text-sm leading-relaxed">
-                Learn how to brand your delivery pages and protect them with multi-factor passwords and time-limited access.
-              </p>
-            </div>
-          </Link>
-
-          <Link href="/docs/payments" className="flex gap-8 group cursor-pointer border-b border-white/5 pb-8 no-underline">
-            <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold bg-gold/5 group-hover:bg-gold/10 transition-colors">
-              <Smartphone size={20} />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-semibold mb-2 flex items-center gap-2 text-ivory group-hover:text-gold transition-colors">
-                Global Payment Methods <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h4>
-              <p className="text-muted text-sm leading-relaxed">
-                Understand the checkout experience for your clients using international cards, 
-                bank transfers, and localized mobile wallets.
-              </p>
-            </div>
-          </Link>
-          
-          <Link href="/docs/teams" className="flex gap-8 group cursor-pointer no-underline">
-            <div className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold bg-gold/5 group-hover:bg-gold/10 transition-colors">
-              <Users size={20} />
-            </div>
-            <div className="flex-1">
-              <h4 className="text-xl font-semibold mb-2 flex items-center gap-2 text-ivory group-hover:text-gold transition-colors">
-                Managing Team Access <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h4>
-              <p className="text-muted text-sm leading-relaxed">
-                Invite collaborators to your organization and manage their permissions for projects and financial data.
-              </p>
-            </div>
-          </Link>
+      <section id="reference" className="mt-12 pt-8 border-t border-white/5">
+        <h3 className="text-lg font-bold mb-4">Reference</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Link href="/docs/audit-logs" className="text-xs text-muted hover:text-gold transition-colors">Audit Logs</Link>
+          <Link href="/docs/kyc-verification" className="text-xs text-muted hover:text-gold transition-colors">Identity/KYC</Link>
+          <Link href="/docs/api-keys" className="text-xs text-muted hover:text-gold transition-colors">Managing Keys</Link>
+          <Link href="/docs/troubleshooting" className="text-xs text-muted hover:text-gold transition-colors">Troubleshooting</Link>
         </div>
       </section>
     </div>

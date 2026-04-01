@@ -1,16 +1,12 @@
 "use client";
 
-import { Navbar } from "@/components/marketing/Navbar";
-import { Footer } from "@/components/marketing/MarketingSections";
 import Link from "next/link";
 import "./video-editors.css";
 
 export default function VideoEditorsCaseStudy() {
   return (
     <>
-      <div className="kente" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}></div>
-      <Navbar />
-      <div className="ve-shell">
+      <div className="kente" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}></div>      <div className="ve-shell">
         {/* BREADCRUMB */}
         <div className="breadcrumb">
           <Link href="/case-studies" className="bc-link">Case Studies</Link>
@@ -49,10 +45,7 @@ export default function VideoEditorsCaseStudy() {
                 <div className="hs-val"><span>24–48 hours</span> after payment</div>
               </div>
               <div className="hs-item">
-                <Link href="https://app.delivami.com/register" className="btn-p" style={{ fontSize: '13px', padding: '10px 18px', textDecoration: 'none' }}>
-                  Start free
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                </Link>
+                
               </div>
             </div>
           </div>
@@ -323,7 +316,7 @@ export default function VideoEditorsCaseStudy() {
           <div className="wrap">
             <div className="s-eyebrow" style={{ justifyContent: 'center', textAlign: 'center' }}>The numbers</div>
             <h2 className="s-h2" style={{ textAlign: 'center', marginBottom: '8px' }}>What changes when<br />the infrastructure <em>actually works.</em></h2>
-            <p className="s-p" style={{ textAlign: 'center', maxWidth: '480px', margin: '0 auto' }}>Aggregated across video editors using Delivami in Ghana, Nigeria, Kenya and South Africa.</p>
+            <p className="s-p" style={{ textAlign: 'center', maxWidth: '480px', margin: '0 auto' }}>Aggregated across video editors using Delivami in Ghana, Nigeria, Cameroon and South Africa.</p>
 
             <div className="impact-row">
               <div className="impact-item" style={{ '--ii-glow': 'rgba(91,164,245,0.12)' } as any}>
@@ -564,17 +557,12 @@ export default function VideoEditorsCaseStudy() {
             Ready to deliver like a pro
           </div>
           <h2 className="cta-h2">Your next project<br />deserves a <em>better system.</em></h2>
-          <p className="cta-sub">Start free. Your first delivery link takes thirty seconds to create. No credit card required.</p>
+          <p className="cta-sub">Your first delivery link takes thirty seconds to create.</p>
           <div className="cta-btns">
-            <Link href="https://app.delivami.com/register" className="btn-p" style={{ textDecoration: 'none' }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              Start your free account
-            </Link>
+            
             <Link href="/case-studies" className="btn-g" style={{ textDecoration: 'none' }}>View all case studies</Link>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </div>    </>
   );
 }
